@@ -34,11 +34,10 @@ let
     inherit qrtx;
     inherit seth;
     inherit setzer;
-    inherit solc-versions;
     inherit token;
 
     hevm-test-report = hevmTestReport dist;
-  };
+  } // dist.pkgs.solc-versions ;
 
 in {
   dapphub.linux.stable = stable linux;
